@@ -3,6 +3,8 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import utility.Log;
+
 public class LoginPage {
 	
  private WebDriver driver;
@@ -26,8 +28,10 @@ public class LoginPage {
 	 driver.findElement(passwordTextbox).clear();
 	 driver.findElement(passwordTextbox).sendKeys(password);
  }
- 
+  
+  
  public void clickLogin() {
+	 Log.info("Clicking on Login Button..");
 	 driver.findElement(LoginButton).click();
  }
  
